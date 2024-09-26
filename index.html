@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Cambiar Color de Fondo</title>
+</head>
+<body>
+    <button id="colorButton">Cambiar Color de Fondo</button>
+
+    <script>
+        document.getElementById('colorButton').addEventListener('click', function() {
+            const colors = [];
+            for (let i = 0; i < 3; i++) {
+                colors.push(Math.floor(Math.random() * 256));
+            }
+            const randomColor = `rgb(${colors[0]}, ${colors[1]}, ${colors[2]})`;
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>
